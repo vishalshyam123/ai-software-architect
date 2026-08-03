@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="AI Software Architect Architecture" id="ai-architecture">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" pageWidth="1600" pageHeight="900" pageScale="1">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- User -->
+        <mxCell id="user" value="User&#xa;&#xa;Project Idea Input" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="40" width="180" height="80" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Frontend -->
+        <mxCell id="frontend" value="Frontend&#xa;&#xa;React.js&#xa;&#xa;- User Interface&#xa;- Dashboard&#xa;- Documentation Viewer" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="180" width="280" height="140" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Backend -->
+        <mxCell id="backend" value="Backend&#xa;&#xa;FastAPI&#xa;&#xa;- Requirement Analyzer&#xa;- SRS Generator&#xa;- UML Generator&#xa;- API Generator" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="390" width="380" height="170" as="geometry"/>
+        </mxCell>
+
+
+        <!-- AI -->
+        <mxCell id="ai" value="AI Service&#xa;&#xa;OpenAI GPT / Llama&#xa;&#xa;- Requirement Understanding&#xa;- Document Generation&#xa;- Architecture Suggestions" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="410" width="300" height="150" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Database -->
+        <mxCell id="database" value="PostgreSQL Database&#xa;&#xa;Stores:&#xa;- Users&#xa;- Projects&#xa;- Requirements&#xa;- Generated Documents" style="shape=cylinder;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="650" width="260" height="150" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Redis -->
+        <mxCell id="redis" value="Redis Cache&#xa;&#xa;- Session Data&#xa;- Temporary AI Responses&#xa;- Performance Optimization" style="shape=cylinder;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="430" width="250" height="130" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Docker -->
+        <mxCell id="docker" value="Containerization&#xa;&#xa;Docker Containers&#xa;&#xa;- React Container&#xa;- FastAPI Container&#xa;- Database Container" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="870" width="300" height="140" as="geometry"/>
+        </mxCell>
+
+
+        <!-- AWS -->
+        <mxCell id="aws" value="Deployment Infrastructure&#xa;&#xa;AWS Cloud&#xa;&#xa;- Hosting&#xa;- Scaling&#xa;- Monitoring" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="630" y="1080" width="280" height="130" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend&#xa;&#xa;□ Application Component&#xa;🛢 Database / Cache&#xa;☁ Cloud Deployment&#xa;→ Data Flow" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="850" width="250" height="150" as="geometry"/>
+        </mxCell>
+
+
+        <!-- Connections -->
+
+        <mxCell id="edge1" style="endArrow=classic;html=1;" edge="1" parent="1" source="user" target="frontend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge2" style="endArrow=classic;html=1;" edge="1" parent="1" source="frontend" target="backend">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge3" style="endArrow=classic;html=1;" edge="1" parent="1" source="backend" target="ai">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge4" style="endArrow=classic;html=1;" edge="1" parent="1" source="backend" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge5" style="endArrow=classic;html=1;" edge="1" parent="1" source="backend" target="redis">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge6" style="endArrow=classic;html=1;" edge="1" parent="1" source="backend" target="docker">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge7" style="endArrow=classic;html=1;" edge="1" parent="1" source="docker" target="aws">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
