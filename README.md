@@ -309,7 +309,6 @@ AI-Software-Architect/
 ├── backend/
 ├── README.md
 └── .gitignore
-```
 ---
 # Git Branching Strategy
 
