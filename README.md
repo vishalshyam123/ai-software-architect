@@ -291,3 +291,27 @@ Upcoming milestones:
 - Sprint Planner
 - Test Case Generator
 - Documentation Export
+
+
+---
+
+# Contributors
+
+| Name | Role |
+|------|------|
+| **Vishal Shyam** | Project Creator, Full Stack Developer & AI Engineer |
+| **Pugazhandi Kannan** | Full Stack Developer & Software Engineer |
+
+---
+
+# License
+
+This project is intended for educational and research purposes. A suitable open-source license (such as the MIT License) can be added in future releases.
+
+---
+
+## Authors
+
+- **Vishal Shyam**
+- **Pugazhandi Kannan**
+
