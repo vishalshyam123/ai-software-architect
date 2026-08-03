@@ -247,6 +247,46 @@ Hospital Management System
 | Version Control | Git & GitHub |
 
 ---
+# Local Development Tools
+
+The following tools are used for developing, testing, and managing the AI Software Architect project locally.
+
+## Development Environment
+
+| Tool | Purpose |
+|------|---------|
+| Visual Studio Code | Primary code editor for frontend and backend development |
+| Git | Version control and source code management |
+| GitHub | Repository hosting and collaboration |
+| Node.js & npm | Frontend development environment and package management |
+| Python | Backend development and AI integration |
+| FastAPI | Backend API development framework |
+| PostgreSQL | Database management system |
+| Docker Desktop | Containerization and local deployment testing |
+| Postman | API testing and validation |
+| Draw.io | Software architecture and system design diagrams |
+| StarUML | UML diagram creation |
+| Figma | UI/UX wireframe and prototype design |
+
+---
+
+## Frontend Development Tools
+
+**Technology:** React.js
+
+Tools used:
+
+- Node.js
+- npm package manager
+- React development server
+- Browser Developer Tools
+
+Commands:
+
+```bash
+npm install
+npm start
+---
 
 # Future Enhancements
 
@@ -270,6 +310,43 @@ AI-Software-Architect/
 ├── README.md
 └── .gitignore
 ```
+---
+# Git Branching Strategy
+
+This project follows the **GitHub Flow branching strategy** for version control and collaborative development.
+
+The `main` branch contains the stable version of the project. All new features are developed in separate feature branches and merged into the main branch after completion and review.
+
+## Branch Structure
+
+## Main Branch
+
+The `main` branch contains the stable and working version of the AI Software Architect project.
+
+Guidelines:
+- Only tested and completed features are merged into the main branch.
+- Direct commits to the main branch are avoided.
+- The branch should always contain a deployable version of the project.
+
+## Feature Branch
+
+### feature/requirement-analyzer
+
+This branch is created for developing the requirement analysis module of the AI Software Architect system.
+
+Responsibilities:
+- Accept user project ideas as input.
+- Analyze software requirements using AI.
+- Identify functional and non-functional requirements.
+- Identify actors and stakeholders.
+- Prepare structured requirements for SRS generation.
+
+## Development Workflow
+
+1. Create a feature branch from the main branch.
+
+```bash
+git checkout -b feature/requirement-analyzer
 
 ---
 
