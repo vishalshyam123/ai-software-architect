@@ -37,23 +37,28 @@ Creating these documents manually is repetitive, time-consuming, and requires ex
 
 # Target Users (Personas)
 
-### 1. Software Developers
+## 1. Software Developers
+
 - Need a structured architecture before coding.
 - Want automatically generated APIs and database schemas.
 
-### 2. Startup Founders
+## 2. Startup Founders
+
 - Quickly validate product ideas.
 - Generate technical documentation for developers.
 
-### 3. Students
+## 3. Students
+
 - Create complete Software Engineering project documentation.
 - Learn industry-standard software architecture.
 
-### 4. Project Managers
+## 4. Project Managers
+
 - Generate sprint plans and effort estimates.
 - Plan development timelines efficiently.
 
-### 5. Software Architects
+## 5. Software Architects
+
 - Reduce repetitive documentation work.
 - Use AI as an assistant during project planning.
 
@@ -68,10 +73,11 @@ To build an intelligent AI assistant that automates software architecture and en
 # Key Features / Goals
 
 ## Requirement Analysis
-- Analyze user project descriptions
-- Identify actors and stakeholders
-- Extract functional requirements
-- Extract non-functional requirements
+
+- Analyze user project descriptions.
+- Identify actors and stakeholders.
+- Extract functional requirements.
+- Extract non-functional requirements.
 
 ---
 
@@ -211,13 +217,13 @@ The project will be considered successful if it can:
 
 # Example Workflow
 
-**Input**
+### Input
 
 ```
 Hospital Management System
 ```
 
-**Generated Output**
+### Generated Output
 
 - Requirement Analysis
 - Software Requirement Specification (SRS)
@@ -237,7 +243,7 @@ Hospital Management System
 # Proposed Technology Stack
 
 | Layer | Technology |
-|--------|------------|
+|---|---|
 | Frontend | React |
 | Backend | FastAPI / Node.js |
 | Database | PostgreSQL |
@@ -247,6 +253,7 @@ Hospital Management System
 | Version Control | Git & GitHub |
 
 ---
+
 # Local Development Tools
 
 The following tools are used for developing, testing, and managing the AI Software Architect project locally.
@@ -254,19 +261,19 @@ The following tools are used for developing, testing, and managing the AI Softwa
 ## Development Environment
 
 | Tool | Purpose |
-|------|---------|
-| Visual Studio Code | Primary code editor for frontend and backend development |
-| Git | Version control and source code management |
+|---|---|
+| Visual Studio Code | Primary code editor |
+| Git | Version control |
 | GitHub | Repository hosting and collaboration |
-| Node.js & npm | Frontend development environment and package management |
+| Node.js & npm | React development environment |
 | Python | Backend development and AI integration |
-| FastAPI | Backend API development framework |
-| PostgreSQL | Database management system |
-| Docker Desktop | Containerization and local deployment testing |
-| Postman | API testing and validation |
-| Draw.io | Software architecture and system design diagrams |
-| StarUML | UML diagram creation |
-| Figma | UI/UX wireframe and prototype design |
+| FastAPI | Backend API framework |
+| PostgreSQL | Database management |
+| Docker Desktop | Containerization |
+| Postman | API testing |
+| Draw.io | Architecture diagrams |
+| StarUML | UML diagrams |
+| Figma | UI/UX wireframes |
 
 ---
 
@@ -286,6 +293,45 @@ Commands:
 ```bash
 npm install
 npm start
+```
+
+---
+
+## Backend Development Tools
+
+**Technology:** FastAPI
+
+Tools used:
+
+- Python
+- FastAPI
+- Uvicorn
+- Virtual Environment
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate environment:
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run backend:
+
+```bash
+uvicorn main:app --reload
+```
+
 ---
 
 # Future Enhancements
@@ -307,9 +353,13 @@ AI-Software-Architect/
 │
 ├── frontend/
 ├── backend/
+├── docs/
 ├── README.md
 └── .gitignore
+```
+
 ---
+
 # Git Branching Strategy
 
 This project follows the **GitHub Flow branching strategy** for version control and collaborative development.
@@ -318,34 +368,69 @@ The `main` branch contains the stable version of the project. All new features a
 
 ## Branch Structure
 
+```
+main
+│
+└── feature/requirement-analyzer
+```
+
+---
+
 ## Main Branch
 
 The `main` branch contains the stable and working version of the AI Software Architect project.
 
 Guidelines:
+
 - Only tested and completed features are merged into the main branch.
 - Direct commits to the main branch are avoided.
-- The branch should always contain a deployable version of the project.
+- The branch should always contain a working version of the project.
+
+---
 
 ## Feature Branch
 
 ### feature/requirement-analyzer
 
-This branch is created for developing the requirement analysis module of the AI Software Architect system.
+This branch is created for developing the requirement analysis module.
 
 Responsibilities:
+
 - Accept user project ideas as input.
 - Analyze software requirements using AI.
 - Identify functional and non-functional requirements.
 - Identify actors and stakeholders.
 - Prepare structured requirements for SRS generation.
 
+---
+
 ## Development Workflow
 
-1. Create a feature branch from the main branch.
+Create a feature branch:
 
 ```bash
 git checkout -b feature/requirement-analyzer
+```
+
+Add changes:
+
+```bash
+git add .
+```
+
+Commit changes:
+
+```bash
+git commit -m "Implemented requirement analyzer"
+```
+
+Push branch:
+
+```bash
+git push -u origin feature/requirement-analyzer
+```
+
+After completion, a Pull Request is created and the feature is merged into the `main` branch.
 
 ---
 
@@ -353,12 +438,15 @@ git checkout -b feature/requirement-analyzer
 
 🚧 Initial Planning Phase
 
-Current milestone:
+## Current Milestone
+
 - Vision Document
 - Repository Setup
 - Frontend & Backend Structure
+- GitHub Workflow Setup
 
-Upcoming milestones:
+## Upcoming Milestones
+
 - Requirement Analyzer
 - SRS Generator
 - UML Generator
@@ -368,13 +456,12 @@ Upcoming milestones:
 - Test Case Generator
 - Documentation Export
 
-
 ---
 
 # Contributors
 
 | Name | Role |
-|------|------|
+|---|---|
 | **Vishal Shyam** | Project Creator, Full Stack Developer & AI Engineer |
 | **Pugazhandi Kannan** | Full Stack Developer & Software Engineer |
 
@@ -386,8 +473,7 @@ This project is intended for educational and research purposes. A suitable open-
 
 ---
 
-## Authors
+# Authors
 
 - **Vishal Shyam**
 - **Pugazhandi Kannan**
-
