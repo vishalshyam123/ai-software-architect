@@ -466,6 +466,409 @@ After completion, a Pull Request is created and the feature is merged into the `
 | **Pugazhandi Kannan** | Full Stack Developer & Software Engineer |
 
 ---
+# Quick Start – Local Development
+
+This guide explains how to set up and run the **AI Software Architect** project locally using Docker.
+
+Docker is the recommended method because it provides a consistent development environment without requiring separate installation of backend, frontend, database, and cache dependencies.
+
+---
+
+# Prerequisites
+
+Make sure the following tools are installed:
+
+- Git
+- Docker Desktop (includes Docker Engine and Docker Compose)
+- (Optional) Node.js 18+ and npm (for frontend development without Docker)
+- (Optional) Python 3.10+ (for backend development without Docker)
+
+Verify installations:
+
+```bash
+git --version
+docker --version
+docker compose version
+```
+
+---
+
+# Clone Repository
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate into the project directory:
+
+```bash
+cd AI-Software-Architect
+```
+
+---
+
+# Setup with Docker (Recommended)
+
+Docker provides the easiest setup with all required services running inside containers.
+
+The application consists of:
+
+- React frontend
+- FastAPI backend
+- PostgreSQL database
+- Redis cache
+- AI service integration
+
+---
+
+# Step 1: Create Environment File
+
+Create the environment configuration file:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env` if required.
+
+Example:
+
+```env
+OPENAI_API_KEY=your_api_key_here
+
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=password
+POSTGRES_DB=ai_software_architect
+
+DATABASE_URL=postgresql://postgres:password@postgres:5432/ai_software_architect
+
+REDIS_URL=redis://redis:6379
+```
+
+The `.env` file stores sensitive configuration details and should not be uploaded to GitHub.
+
+---
+
+# Step 2: Build and Run Application
+
+Build Docker images and start all services:
+
+```bash
+docker compose up --build
+```
+
+The following services will start:
+
+```
+Frontend  → http://localhost:3000
+
+Backend API → http://localhost:8000
+
+API Docs → http://localhost:8000/docs
+
+PostgreSQL → localhost:5432
+
+Redis → localhost:6379
+```
+
+---
+
+# Step 3: Run in Background
+
+To start containers in detached mode:
+
+```bash
+docker compose up -d
+```
+
+The application will continue running in the background.
+
+---
+
+# Step 4: Stop Services
+
+Stop all running services:
+
+```bash
+docker compose down
+```
+
+To stop services and remove stored database/cache volumes:
+
+```bash
+docker compose down -v
+```
+
+---
+
+# Important Docker Notes
+
+## ✅ Hot Reload Enabled
+
+During development:
+
+- Backend automatically reloads when FastAPI code changes.
+- Frontend automatically refreshes when React code changes.
+
+---
+
+## ✅ Database Persistence
+
+PostgreSQL data is stored using Docker volumes.
+
+Database data remains available even after:
+
+```bash
+docker compose down
+```
+
+Removing volumes:
+
+```bash
+docker compose down -v
+```
+
+will delete stored database data.
+
+---
+
+## ✅ Inter-Service Communication
+
+Docker Compose automatically manages communication between services.
+
+- Frontend communicates with backend API.
+- Backend communicates with PostgreSQL database.
+- Backend communicates with Redis cache.
+- Backend connects with OpenAI/Llama AI services.
+
+---
+
+# Docker Project Structure
+
+```
+AI-Software-Architect/
+│
+├── frontend/
+│   └── Dockerfile
+│
+├── backend/
+│   └── Dockerfile
+│
+├── docker-compose.yml
+│
+├── .env.example
+│
+└── README.md
+```
+
+---
+
+# Useful Docker Commands
+
+| Command | Purpose |
+|---|---|
+| `docker compose up` | Start all services |
+| `docker compose up -d` | Start services in background |
+| `docker compose up --build` | Rebuild images and start services |
+| `docker compose ps` | List running containers |
+| `docker compose logs -f` | View real-time logs |
+| `docker compose logs -f backend` | View backend logs only |
+| `docker compose logs -f frontend` | View frontend logs only |
+| `docker compose stop` | Stop all services |
+| `docker compose down` | Stop and remove containers |
+| `docker compose down -v` | Stop containers and remove volumes |
+| `docker compose exec backend bash` | Open backend container shell |
+
+---
+
+# Alternative: Local Development Without Docker
+
+Docker is recommended, but the project can also be run manually.
+
+## Backend Setup
+
+Navigate to backend:
+
+```bash
+cd backend
+```
+
+Create virtual environment:
+
+```bash
+python -m venv venv
+```
+
+Activate environment:
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run FastAPI server:
+
+```bash
+uvicorn main:app --reload
+```
+
+Backend runs at:
+
+```
+http://localhost:8000
+```
+
+---
+
+## Frontend Setup
+
+Open another terminal:
+
+```bash
+cd frontend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start React application:
+
+```bash
+npm start
+```
+
+Frontend runs at:
+
+```
+http://localhost:3000
+```
+
+---
+
+# Database Setup Without Docker
+
+Install PostgreSQL locally.
+
+Create database:
+
+```sql
+CREATE DATABASE ai_software_architect;
+```
+
+Update backend environment file:
+
+```env
+DATABASE_URL=postgresql://username:password@localhost:5432/ai_software_architect
+```
+
+---
+
+# Development Workflow
+
+Create a feature branch:
+
+```bash
+git checkout -b feature/<feature-name>
+```
+
+Example:
+
+```bash
+git checkout -b feature/requirement-analyzer
+```
+
+After making changes:
+
+```bash
+git add .
+```
+
+Commit:
+
+```bash
+git commit -m "Added requirement analyzer module"
+```
+
+Push branch:
+
+```bash
+git push origin feature/requirement-analyzer
+```
+
+Create a Pull Request and merge into the `main` branch after review.
+
+---
+
+# Troubleshooting
+
+## Docker Container Not Starting
+
+Check running containers:
+
+```bash
+docker compose ps
+```
+
+View logs:
+
+```bash
+docker compose logs
+```
+
+---
+
+## Port Already in Use
+
+Check active containers:
+
+```bash
+docker ps
+```
+
+Stop the conflicting container:
+
+```bash
+docker stop <container-id>
+```
+
+---
+
+## Rebuild After Dependency Changes
+
+If packages are added or changed:
+
+```bash
+docker compose down
+docker compose build
+docker compose up
+```
+
+---
+
+The **AI Software Architect** application will now be available at:
+
+```
+Frontend:
+http://localhost:3000
+
+Backend:
+http://localhost:8000
+
+API Documentation:
+http://localhost:8000/docs
+```
 
 # License
 
