@@ -25,8 +25,7 @@ These features are essential for the Minimum Viable Product (MVP).
 | M6 | Class Diagram Generator | Generate Class Diagrams based on project requirements. |
 | M7 | ER Diagram Generator | Generate Entity Relationship diagrams for the database. |
 | M8 | Database Schema Generator | Create PostgreSQL database tables and relationships. |
-| M9 | REST API Generator | Generate REST API endpoints with request and response formats. |
-| M10 | Documentation Export | Export generated documents in Markdown format. |
+
 
 ---
 
@@ -37,13 +36,8 @@ These features provide significant value and are planned after the MVP.
 | ID | Feature | Description |
 |----|---------|-------------|
 | S1 | Sequence Diagram Generator | Generate Sequence Diagrams for major workflows. |
-| S2 | Sprint Planning | Generate sprint plans and task breakdowns. |
-| S3 | User Story Generation | Automatically generate user stories from requirements. |
-| S4 | Effort Estimation | Estimate development effort and project timeline. |
-| S5 | Test Case Generation | Generate unit, integration, and acceptance test cases. |
-| S6 | Mermaid Diagram Export | Export diagrams in Mermaid syntax for GitHub compatibility. |
-| S7 | API Documentation | Generate detailed API documentation with examples. |
-| S8 | Requirement Summary | Display a summarized view of extracted requirements before document generation. |
+| S2 | Mermaid Diagram Export | Export diagrams in Mermaid syntax for GitHub compatibility. |
+| S3 | Requirement Summary | Display a summarized view of extracted requirements before document generation. |
 
 ---
 
@@ -85,8 +79,8 @@ These features are outside the scope of Version 1.0 and may be considered in fut
 
 | Priority | Number of Features |
 |----------|-------------------:|
-| Must Have | 10 |
-| Should Have | 8 |
+| Must Have | 8 |
+| Should Have | 3 |
 | Could Have | 8 |
 | Won't Have | 8 |
 
