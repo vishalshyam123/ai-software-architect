@@ -1,174 +1,149 @@
-# AI Software Architect - GitHub Issues
+# AI Software Architect - Backlog Stories
 
 ## Issue #1: Project Idea Input Interface
-
 **User Story:**  
-As a user, I want to enter my software project idea into the system so that the AI can understand the application's purpose. The interface should be simple, intuitive, and support detailed project descriptions for better analysis.
+As a user, I want a simple and intuitive input interface where I can enter my project title and description, so that the AI receives complete context for generating architecture artifacts.
 
 ---
 
-## Issue #2: AI Requirement Analyzer
-
+## Issue #2: System Context & Domain Extraction
 **User Story:**  
-As a user, I want the AI to analyze my project description and extract both functional and non-functional requirements. This will reduce the time spent manually identifying system requirements and improve project planning.
+As a user, I want the system to parse my project idea and extract core domain context, so that subsequent document and diagram generators use a unified understanding of the application.
 
 ---
 
-## Issue #3: Stakeholder Identification
-
+## Issue #3: Stakeholder & Primary Actor Extractor
 **User Story:**  
-As a user, I want the AI to identify all actors and stakeholders involved in the project. This helps ensure that every type of user and their interactions with the system are considered during development.
+As a user, I want the AI to automatically identify primary actors, secondary roles, and external systems, so that system boundaries are clearly established before document creation.
 
 ---
 
-## Issue #4: Requirement Summary Generator
-
+## Issue #4: Requirement Analysis & Verification Summary
 **User Story:**  
-As a user, I want a concise summary of the extracted requirements before document generation. This allows me to verify the AI's understanding and make corrections if necessary.
+As a user, I want a high-level summary of identified requirements before full document generation, so that I can quickly verify the AI's understanding of my idea.
 
 ---
 
-## Issue #5: Generate Software Requirement Specification (SRS)
-
+## Issue #5: SRS - Executive Summary & Objectives Generator
 **User Story:**  
-As a user, I want the AI to generate a complete Software Requirement Specification (SRS) document. The document should include scope, objectives, requirements, assumptions, and constraints following software engineering standards.
+As a user, I want the AI to generate an Introduction, Scope, and Business Objectives section within the SRS, so that the project background is formally defined.
 
 ---
 
-## Issue #6: Functional Requirements Generator
-
+## Issue #6: SRS - Functional Requirements Generator
 **User Story:**  
-As a user, I want the AI to automatically list all functional requirements based on my project description. This ensures that every core feature of the application is clearly documented before development begins.
+As a user, I want all core functional requirements organized by feature modules in the SRS, so that development requirements are clearly specified before coding.
 
 ---
 
-## Issue #7: Non-Functional Requirements Generator
-
+## Issue #7: SRS - Non-Functional Requirements Generator
 **User Story:**  
-As a user, I want the AI to generate non-functional requirements such as performance, security, reliability, and scalability. This helps create a robust and production-ready software design.
+As a user, I want non-functional requirements detailing security, performance, scalability, and availability included in the SRS, so that quality standards are established early.
 
 ---
 
-## Issue #8: Assumptions and Constraints
-
+## Issue #8: SRS - Assumptions & Constraints Identification
 **User Story:**  
-As a user, I want the AI to identify project assumptions and constraints automatically. This makes it easier to understand project limitations and define realistic expectations.
+As a user, I want the system to identify project constraints, technical limitations, and dependencies in the SRS, so that team expectations remain realistic.
 
 ---
 
-## Issue #9: Generate Use Case Diagram
-
+## Issue #9: High-Level System Architecture Diagram Generator
 **User Story:**  
-As a user, I want a Use Case Diagram to be generated automatically based on the identified actors and requirements. This provides a visual representation of how users interact with the system.
+As a software architect, I want an overall System Architecture Diagram showing client, backend API, database, and third-party integrations, so that I can visualize the entire tech stack layout.
 
 ---
 
-## Issue #10: Generate Class Diagram
-
+## Issue #10: Architectural Pattern Selection
 **User Story:**  
-As a developer, I want the AI to create a Class Diagram showing classes, attributes, methods, and relationships. This serves as a blueprint for implementing the application's architecture.
+As a software architect, I want the system to recommend and diagram an appropriate architectural pattern (e.g., Monolithic, Microservices, Layered) based on project complexity.
 
 ---
 
-## Issue #11: Generate Sequence Diagram
-
+## Issue #11: Use Case Diagram - Primary Actor Workflows
 **User Story:**  
-As a developer, I want Sequence Diagrams for important workflows in the system. These diagrams should illustrate how objects communicate during different operations.
+As a user, I want a Use Case Diagram generated for main user roles, so that I can see how end-users interact with key core features.
 
 ---
 
-## Issue #12: Mermaid Diagram Export
-
+## Issue #12: Use Case Diagram - Administrative Workflows
 **User Story:**  
-As a user, I want all UML diagrams exported in Mermaid format. This allows me to edit, visualize, and integrate diagrams directly into GitHub documentation.
+As a user, I want administrative and system actor interactions included in the Use Case Diagram, so that back-office management processes are visually documented.
 
 ---
 
-## Issue #13: Generate ER Diagram
-
+## Issue #13: Class Diagram - Core Entity Identification
 **User Story:**  
-As a developer, I want the AI to generate an Entity Relationship Diagram that models the database structure. This simplifies database planning and implementation.
+As a developer, I want an Object-Oriented Class Diagram showing main domain classes with attributes and methods, so that I have a clear blueprint for object design.
 
 ---
 
-## Issue #14: PostgreSQL Schema Generator
-
+## Issue #14: Class Diagram - Entity Relationships & Multiplicities
 **User Story:**  
-As a developer, I want SQL table creation scripts generated automatically for PostgreSQL. The generated schema should include tables, columns, constraints, and relationships.
+As a developer, I want relationships (inheritance, association, aggregation) and multiplicities mapped in the Class Diagram, so that class dependencies are clearly structured.
 
 ---
 
-## Issue #15: Database Relationship Generator
-
+## Issue #15: ER Diagram - Conceptual Data Model
 **User Story:**  
-As a developer, I want primary keys, foreign keys, and relationships identified automatically. This ensures proper database normalization and maintains data integrity.
+As a database designer, I want a conceptual ER Diagram showing core entities and their relationships, so that data modeling can begin seamlessly.
 
 ---
 
-## Issue #16: REST API Specification Generator
-
+## Issue #16: ER Diagram - Logical Attribute & Cardinality Definition
 **User Story:**  
-As a developer, I want REST API endpoints generated from the project requirements. The APIs should include endpoint names, HTTP methods, and expected request and response formats.
+As a database designer, I want primary keys, foreign keys, and cardinalities specified in the ER Diagram, so that database normalization rules are preserved.
 
 ---
 
-## Issue #17: API Documentation Generator
-
+## Issue #17: Sequence Diagram - Primary User Authentication Workflow
 **User Story:**  
-As a developer, I want detailed API documentation generated for every endpoint. This documentation should include descriptions, parameters, request examples, and response examples.
+As a developer, I want a Sequence Diagram detailing the user authentication and authorization workflow, so that step-by-step token validation and component calls are clear.
 
 ---
 
-## Issue #18: Authentication API Generator
-
+## Issue #18: Sequence Diagram - Core Business Transaction Workflow
 **User Story:**  
-As a developer, I want authentication and authorization APIs generated automatically. This includes user registration, login, password management, and secure access control.
+As a developer, I want a Sequence Diagram mapping the main execution flow of the application's central feature, so that object communication over time is fully documented.
 
 ---
 
-## Issue #19: Sprint Planning Generator
-
+## Issue #19: Sequence Diagram - Error Handling & Edge Workflows
 **User Story:**  
-As a project manager, I want the AI to generate sprint plans from the identified features. The sprint plan should organize work into manageable iterations for efficient development.
+As a developer, I want a Sequence Diagram depicting exception handling and retry flows, so that component behaviors during error states are explicitly defined.
 
 ---
 
-## Issue #20: User Story Prioritization
-
+## Issue #20: Mermaid.js Syntax Rendering
 **User Story:**  
-As a project manager, I want generated user stories prioritized based on business value and development dependencies. This helps the team focus on the most important features first.
+As a user, I want all UML and ER diagrams rendered live on screen using Mermaid.js, so that I can inspect clean visual diagrams without leaving the app.
 
 ---
 
-## Issue #21: Development Effort Estimator
-
+## Issue #21: Diagram Code Editor & Source Copy
 **User Story:**  
-As a project manager, I want the AI to estimate the effort required for implementing each feature. This improves project scheduling, budgeting, and resource allocation.
+As a user, I want to view and copy raw Mermaid.js markup for all diagrams, so that I can embed or edit them in GitHub docs or markdown readers.
 
 ---
 
-## Issue #22: Unit Test Case Generator
-
+## Issue #22: Markdown Documentation Export
 **User Story:**  
-As a developer, I want unit test cases generated for individual modules and functions. This ensures that each component works correctly before integration.
+As a user, I want to export the complete SRS document along with embedded diagram markup into a single `.md` file, so that project documentation can be checked into version control.
 
 ---
 
-## Issue #23: Integration Test Case Generator
-
+## Issue #23: PDF Document Export
 **User Story:**  
-As a tester, I want integration test cases that verify interactions between multiple system components. This helps identify issues that may not appear during unit testing.
+As a user, I want to download the SRS document and rendered visual diagrams as a formatted PDF file, so that I can easily share architectural blueprints with non-technical stakeholders.
 
 ---
 
-## Issue #24: Acceptance Test Generator
-
+## Issue #24: Project Artifact Caching
 **User Story:**  
-As a client, I want acceptance test cases generated based on business requirements. These tests will confirm that the software satisfies all expected functionality before deployment.
+As a user, I want previously generated SRS and diagram artifacts cached, so that I can re-examine my project blueprints without triggering unnecessary AI re-generations.
 
 ---
 
-## Issue #25: Documentation Export
-
+## Issue #25: Multi-Project Management Dashboard
 **User Story:**  
-As a user, I want all generated documents, diagrams, APIs, and reports exported in Markdown and PDF formats. This makes it easy to share, review, and maintain complete project documentation throughout development.
+As a user, I want a dashboard interface listing all my created software architecture blueprints, so that I can view, update, or export multiple project designs over time.
