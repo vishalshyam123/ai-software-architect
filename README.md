@@ -8,7 +8,7 @@
 
 **AI Software Architect** is an intelligent system that transforms a simple project idea into a complete software development blueprint.
 
-Instead of immediately generating code, the system follows the same workflow as an experienced software architect. It analyzes project requirements and automatically creates Software Requirement Specifications (SRS), UML diagrams, database designs, REST API documentation, sprint planning, effort estimation, testing documents, and other essential software engineering artifacts.
+Instead of immediately generating code, the system follows the same workflow as an experienced software architect. It analyzes project requirements and automatically creates Software Requirement Specifications (SRS), UML diagrams, database designs.
 
 This helps developers, startups, students, and software teams reduce planning time and begin implementation with a well-defined architecture.
 
@@ -24,10 +24,7 @@ Teams usually need to prepare:
 - Functional & Non-functional Requirements
 - UML Diagrams
 - Database Design
-- API Documentation
-- Sprint Planning
-- Test Cases
-- Project Documentation
+
 
 Creating these documents manually is repetitive, time-consuming, and requires experienced architects.
 
@@ -119,65 +116,8 @@ Automatically generate:
 - Primary Keys
 - Foreign Keys
 - Relationships
-- PostgreSQL SQL Scripts
 
----
 
-## REST API Design
-
-Generate complete API specifications including:
-
-- Endpoints
-- HTTP Methods
-- Request Body
-- Response Body
-- Authentication Requirements
-- Error Responses
-
----
-
-## Sprint Planning
-
-Automatically create:
-
-- Product Backlog
-- Sprint Breakdown
-- User Stories
-- Story Points
-- Development Timeline
-
----
-
-## Effort Estimation
-
-Estimate:
-
-- Development Time
-- Complexity
-- Team Size
-- Risk Level
-
----
-
-## Test Case Generation
-
-Generate:
-
-- Unit Test Cases
-- Integration Test Cases
-- Functional Test Cases
-- Edge Cases
-- Acceptance Criteria
-
----
-
-## Documentation Export
-
-Support exporting generated documents as:
-
-- Markdown
-- PDF
-- DOCX (Future)
 
 ---
 
@@ -188,9 +128,6 @@ The project will be considered successful if it can:
 - Generate complete SRS documents within seconds.
 - Produce accurate UML diagrams automatically.
 - Design normalized PostgreSQL database schemas.
-- Generate production-ready REST API specifications.
-- Create realistic sprint plans and effort estimates.
-- Produce comprehensive software testing documentation.
 - Reduce project planning time by more than 80%.
 
 ---
@@ -231,12 +168,6 @@ Hospital Management System
 - Class Diagram
 - Sequence Diagram
 - ER Diagram
-- PostgreSQL Database Schema
-- REST API Design
-- Sprint Planning
-- Effort Estimation
-- Test Cases
-- Technical Documentation
 
 ---
 
@@ -451,10 +382,6 @@ After completion, a Pull Request is created and the feature is merged into the `
 - SRS Generator
 - UML Generator
 - Database Designer
-- API Generator
-- Sprint Planner
-- Test Case Generator
-- Documentation Export
 
 ---
 
