@@ -1,0 +1,4 @@
+[tool.mutmut]
+paths_to_mutate = ["app/services/ai_service.py"]
+runner = "pytest"
+tests_dir = ["tests/"]

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Software Architect - Complete Architectural Diagrams Gallery</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --success: #10b981;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); padding: 2rem 1rem; line-height: 1.5; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    header { text-align: center; margin-bottom: 3rem; }
+    header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; background: linear-gradient(135deg, #60a5fa, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    header p { color: var(--muted); font-size: 1.1rem; }
+    .notice { background: rgba(59, 130, 246, 0.1); border: 1px solid var(--primary); border-radius: 8px; padding: 1rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .section-title { font-size: 1.8rem; margin: 2.5rem 0 1.5rem; border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; color: #93c5fd; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 2rem; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3); }
+    .card-header { padding: 1rem 1.5rem; background: rgba(0,0,0,0.2); border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .card-title { font-size: 1.25rem; font-weight: 600; color: #e2e8f0; }
+    .btn-group { display: flex; gap: 0.5rem; }
+    .btn { background: var(--primary); color: white; border: none; padding: 0.45rem 0.9rem; border-radius: 6px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: background 0.2s; display: inline-flex; align-items: center; gap: 0.3rem; }
+    .btn:hover { background: var(--primary-hover); }
+    .btn-secondary { background: #475569; }
+    .btn-secondary:hover { background: #64748b; }
+    .diagram-container { padding: 2rem; display: flex; justify-content: center; background: #ffffff; border-radius: 0 0 12px 12px; min-height: 250px; overflow-x: auto; }
+    .diagram-container svg { max-width: 100%; height: auto; }
+    footer { text-align: center; margin-top: 4rem; color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AI Software Architect</h1>
+      <p>Visual Diagrams Gallery (DFD, ERD & UML Specifications)</p>
+    </header>
+
+    <div class="notice">
+      <div>
+        <strong>📸 Instant Image Download:</strong> Click the <strong>"Download PNG"</strong> button on any diagram below to save the high-resolution image directly to your computer for your report!
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- B. DATA FLOW DIAGRAMS                      -->
+    <!-- ========================================== -->
+    <h2 class="section-title">B. Data Flow Diagrams (DFD)</h2>
+
+    <!-- B.1 Level 0 DFD -->
+    <div class="card" id="card-dfd-0">
+      <div class="card-header">
+        <span class="card-title">1. Level 0 DFD — Context Diagram</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-dfd-0', 'DFD_Level_0_Context_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-dfd-0', 'DFD_Level_0_Context_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-dfd-0">
+        <pre class="mermaid">
+flowchart TD
+    User(["Software Engineers / Students / Architects"])
+    AIServiceExt(["External AI Gateway (OpenAI / LLM API)"])
+    
+    SystemCore[["0.0<br/>AI Software Architect System"]]
+
+    User -->|1. Project Title, Description & Domain Selection| SystemCore
+    SystemCore -->|2. Generated SRS Document, 5 UML Diagrams & 3NF SQL Schema| User
+    
+    SystemCore -->|3. Architectural Prompt Context & System Schemas| AIServiceExt
+    AIServiceExt -->|4. Synthesized Requirements, Entities & Workflows| SystemCore
+        </pre>
+      </div>
+    </div>
+
+    <!-- B.2 Level 1 DFD -->
+    <div class="card" id="card-dfd-1">
+      <div class="card-header">
+        <span class="card-title">2. Level 1 DFD — Process Decomposition</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-dfd-1', 'DFD_Level_1_Process_Decomposition.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-dfd-1', 'DFD_Level_1_Process_Decomposition.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-dfd-1">
+        <pre class="mermaid">
+flowchart TB
+    User(["User (Developer / Architect)"])
+    ExtAI(["AI Gateway / Heuristic Engine"])
+    
+    subgraph Storage["Data Stores"]
+        D1[("D1: Project Profiles & Configurations")]
+        D2[("D2: Requirements & MoSCoW Specifications")]
+        D3[("D3: UML Diagrams & Mermaid Specifications")]
+        D4[("D4: Relational 3NF Schemas & DDL Scripts")]
+    end
+
+    P1["1.0<br/>Intake & Input Validation Process"]
+    P2["2.0<br/>Requirements Engineering & Decomposition"]
+    P3["3.0<br/>IEEE 830 SRS Synthesizer"]
+    P4["4.0<br/>UML Architectural Diagram Generator"]
+    P5["5.0<br/>3NF Database Schema & ERD Synthesizer"]
+    P6["6.0<br/>Interactive Blueprint Presentation & Export Engine"]
+
+    User -->|Project Title, Description & Domain| P1
+    P1 -->|Validated Input DTO| D1
+    
+    D1 -->|Project Concept Payload| P2
+    P2 <-->|Prompt Construction & Entity Parsing| ExtAI
+    P2 -->|Structured Actors, Stakeholders & FR/NFR| D2
+
+    D2 -->|Requirements Context| P3
+    P3 -->|IEEE 830 Markdown Document| D2
+
+    D2 -->|Entity Models & Workflows| P4
+    P4 -->|Use Case, Class, Sequence, Activity & Component Syntax| D3
+
+    D2 -->|Entities & Normalization Constraints| P5
+    P5 -->|PostgreSQL DDL & Mermaid ERD| D4
+
+    D2 -->|SRS & Analysis| P6
+    D3 -->|Mermaid Diagram Code| P6
+    D4 -->|ERD & DDL Scripts| P6
+    P6 -->|Rendered SVG Diagrams, Markdown & SQL Exports| User
+        </pre>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- C. ENTITY-RELATIONSHIP DIAGRAM             -->
+    <!-- ========================================== -->
+    <h2 class="section-title">C. Entity-Relationship Diagram (ERD)</h2>
+
+    <div class="card" id="card-erd">
+      <div class="card-header">
+        <span class="card-title">3. System Entity-Relationship Diagram (ERD)</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-erd', 'System_ERD_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-erd', 'System_ERD_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-erd">
+        <pre class="mermaid">
+erDiagram
+    USERS ||--o{ PROJECTS : "owns"
+    PROJECTS ||--|| REQUIREMENT_ANALYSES : "generates"
+    REQUIREMENT_ANALYSES ||--o{ ACTORS : "identifies"
+    REQUIREMENT_ANALYSES ||--o{ FUNCTIONAL_REQUIREMENTS : "defines"
+    REQUIREMENT_ANALYSES ||--o{ NON_FUNCTIONAL_REQUIREMENTS : "specifies"
+    PROJECTS ||--|| SRS_DOCUMENTS : "produces"
+    PROJECTS ||--|| UML_BLUEPRINTS : "generates"
+    PROJECTS ||--|| DATABASE_DESIGNS : "architects"
+    DATABASE_DESIGNS ||--o{ DB_TABLE_DEFINITIONS : "specifies"
+    PROJECTS ||--o{ GENERATION_AUDIT_LOGS : "logs"
+
+    USERS {
+        uuid id PK
+        string email UK
+        string password_hash
+        string full_name
+        string role
+        boolean is_active
+        timestamp created_at
+    }
+
+    PROJECTS {
+        uuid id PK
+        uuid user_id FK
+        string title
+        text description
+        string domain
+        string generation_mode
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    REQUIREMENT_ANALYSES {
+        uuid id PK
+        uuid project_id FK
+        text executive_summary
+        string domain_classified
+        timestamp analyzed_at
+    }
+
+    ACTORS {
+        uuid id PK
+        uuid analysis_id FK
+        string actor_name
+        string actor_type
+        text responsibility
+    }
+
+    FUNCTIONAL_REQUIREMENTS {
+        uuid id PK
+        uuid analysis_id FK
+        string req_code
+        string category
+        string title
+        text description
+        string moscow_priority
+    }
+
+    NON_FUNCTIONAL_REQUIREMENTS {
+        uuid id PK
+        uuid analysis_id FK
+        string category
+        string metric
+        string target_value
+    }
+
+    SRS_DOCUMENTS {
+        uuid id PK
+        uuid project_id FK
+        string ieee_standard
+        text markdown_content
+        timestamp generated_at
+    }
+
+    UML_BLUEPRINTS {
+        uuid id PK
+        uuid project_id FK
+        text use_case_diagram
+        text class_diagram
+        text sequence_diagram
+        text activity_diagram
+        text component_diagram
+        timestamp generated_at
+    }
+
+    DATABASE_DESIGNS {
+        uuid id PK
+        uuid project_id FK
+        text mermaid_er_diagram
+        text postgres_sql_ddl
+        string normalization_level
+        timestamp generated_at
+    }
+
+    DB_TABLE_DEFINITIONS {
+        uuid id PK
+        uuid db_design_id FK
+        string table_name
+        text description
+    }
+
+    GENERATION_AUDIT_LOGS {
+        uuid id PK
+        uuid project_id FK
+        string engine_used
+        integer execution_time_ms
+        string status
+        timestamp logged_at
+    }
+        </pre>
+      </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- D. UML DIAGRAMS                            -->
+    <!-- ========================================== -->
+    <h2 class="section-title">D. UML Diagrams</h2>
+
+    <!-- D.1 Use Case Diagram -->
+    <div class="card" id="card-use-case">
+      <div class="card-header">
+        <span class="card-title">4. UML Use Case Diagram</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-use-case', 'UML_Use_Case_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-use-case', 'UML_Use_Case_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-use-case">
+        <pre class="mermaid">
+graph LR
+    subgraph Actors["Primary Personas"]
+        Dev["Software Developer"]
+        Student["Student / Learner"]
+        PM["Project Manager"]
+        Architect["Enterprise Architect"]
+    end
+
+    subgraph SystemBoundary["AI Software Architect System Boundary"]
+        UC1(["Input Project Concept & Domain"])
+        UC2(["Analyze Stakeholders & Requirements"])
+        UC3(["Prioritize Requirements via MoSCoW"])
+        UC4(["Generate IEEE 830 SRS Document"])
+        UC5(["Generate 5 UML Mermaid Diagrams"])
+        UC6(["Generate 3NF PostgreSQL Schema & ERD"])
+        UC7(["Interactive Diagram Pan/Zoom & SVG Export"])
+        UC8(["Download Markdown & DDL Artifacts"])
+    end
+
+    Dev --> UC1
+    Dev --> UC5
+    Dev --> UC6
+    Dev --> UC8
+
+    Student --> UC1
+    Student --> UC2
+    Student --> UC4
+    Student --> UC5
+    Student --> UC7
+
+    PM --> UC1
+    PM --> UC2
+    PM --> UC3
+    PM --> UC4
+
+    Architect --> UC1
+    Architect --> UC5
+    Architect --> UC6
+    Architect --> UC8
+        </pre>
+      </div>
+    </div>
+
+    <!-- D.2 Class Diagram -->
+    <div class="card" id="card-class">
+      <div class="card-header">
+        <span class="card-title">5. UML Class Diagram (Backend Architecture)</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-class', 'UML_Class_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-class', 'UML_Class_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-class">
+        <pre class="mermaid">
+classDiagram
+    class FastAPIApp {
+        +String title
+        +String version
+        +include_router(router)
+        +start_server()
+    }
+
+    class ProjectInputDTO {
+        +String title
+        +String description
+        +String domain
+        +validate()
+    }
+
+    class FullBlueprintResponseDTO {
+        +String project_title
+        +RequirementAnalysisResponse analysis
+        +SRSResponse srs
+        +UMLResponse uml_diagrams
+        +DatabaseDesignResponse database_design
+    }
+
+    class AIService {
+        -String api_key
+        -AsyncOpenAI client
+        +analyze_requirements(title, desc, domain) Dict
+        +generate_srs(title, desc, analysis) Dict
+        +generate_uml(title, desc, analysis) Dict
+        +generate_database_design(title, desc, analysis) Dict
+        -_call_llm(system_prompt, user_prompt) Dict
+        -_extract_domain_entities(title, desc) Dict
+    }
+
+    class RequirementAnalysis {
+        +String project_title
+        +String summary
+        +List actors
+        +List stakeholders
+        +List functional_requirements
+        +List non_functional_requirements
+    }
+
+    class UMLBlueprint {
+        +String project_title
+        +String use_case_diagram
+        +String class_diagram
+        +String sequence_diagram
+        +String activity_diagram
+        +String component_diagram
+    }
+
+    class DatabaseDesign {
+        +String project_title
+        +String er_diagram
+        +String sql_schema
+        +List tables
+        +List relationships
+    }
+
+    FastAPIApp --> ProjectInputDTO : receives
+    FastAPIApp --> AIService : delegates_to
+    AIService --> RequirementAnalysis : produces
+    AIService --> UMLBlueprint : produces
+    AIService --> DatabaseDesign : produces
+    FastAPIApp --> FullBlueprintResponseDTO : returns
+        </pre>
+      </div>
+    </div>
+
+    <!-- D.3 Sequence Diagram -->
+    <div class="card" id="card-seq">
+      <div class="card-header">
+        <span class="card-title">6. UML Sequence Diagram (Execution Workflow)</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-seq', 'UML_Sequence_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-seq', 'UML_Sequence_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-seq">
+        <pre class="mermaid">
+sequenceDiagram
+    autonumber
+    actor Client as User (React UI)
+    participant Nginx as Nginx Reverse Proxy
+    participant API as FastAPI Router
+    participant AISvc as AI Hybrid Service
+    participant LLM as External LLM / Heuristics
+    participant DB as PostgreSQL 16
+    participant Mermaid as Mermaid.js (Browser)
+
+    Client->>Nginx: POST /api/generate-all (payload)
+    Nginx->>API: Proxy pass request to ASGI Worker
+    API->>API: Validate input schema (Pydantic DTO)
+    
+    API->>AISvc: analyze_requirements()
+    AISvc->>LLM: Dispatch Requirement System Prompt
+    LLM-->>AISvc: Structured Actors, FR & NFR JSON
+    AISvc-->>API: RequirementAnalysis Object
+    
+    par Concurrent Blueprint Synthesis
+        API->>AISvc: generate_srs()
+        AISvc->>LLM: Generate IEEE 830 Markdown
+        LLM-->>AISvc: Markdown SRS Text
+    and
+        API->>AISvc: generate_uml()
+        AISvc->>LLM: Generate 5 Mermaid UML Diagrams
+        LLM-->>AISvc: UseCase, Class, Seq, Activity, Comp Syntax
+    and
+        API->>AISvc: generate_database_design()
+        AISvc->>LLM: Generate 3NF PostgreSQL DDL & ERD
+        LLM-->>AISvc: PostgreSQL SQL + Mermaid ERD
+    end
+
+    API->>DB: Log transaction audit record
+    DB-->>API: Acknowledged
+    API-->>Nginx: HTTP 200 OK (Full Blueprint JSON)
+    Nginx-->>Client: Deliver Complete Payload
+    
+    Client->>Mermaid: Parse Mermaid syntax strings
+    Mermaid-->>Client: Render interactive SVG diagrams
+    Client-->>Client: Update UI tabs with live Blueprint
+        </pre>
+      </div>
+    </div>
+
+    <!-- D.4 Activity Diagram -->
+    <div class="card" id="card-act">
+      <div class="card-header">
+        <span class="card-title">7. UML Activity Diagram (Control Flow)</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-act', 'UML_Activity_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-act', 'UML_Activity_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-act">
+        <pre class="mermaid">
+flowchart TD
+    Start([User Initiates Blueprint Generation]) --> ValidateInput{{"Is Input Valid?<br/>(Title & Description present)"}}
+    
+    ValidateInput -- No --> Return422[Return HTTP 422 Unprocessable Entity]
+    Return422 --> TerminateNode([Process Terminated])
+    
+    ValidateInput -- Yes --> CheckAPIKey{{"Is OpenAI API Key<br/>Configured & Reachable?"}}
+    
+    CheckAPIKey -- Yes --> InvokeLLM[Query LLM via OpenAI API]
+    InvokeLLM --> CheckResponse{{"Did LLM Return<br/>Valid JSON Schema?"}}
+    
+    CheckResponse -- Yes --> ParseBlueprint[Parse Synthesized Architectural Blueprint]
+    CheckResponse -- No --> FallbackNotice[Trigger Heuristic Fallback Engine]
+    
+    CheckAPIKey -- No --> FallbackNotice
+    FallbackNotice --> ExtractEntities[Perform Semantic Entity & Workflow Extraction]
+    ExtractEntities --> SynthesizeHeuristic[Synthesize 3NF Schema & 5 Mermaid Diagrams]
+    SynthesizeHeuristic --> ParseBlueprint
+    
+    ParseBlueprint --> SaveAudit[(Persist Generation Record to PostgreSQL)]
+    SaveAudit --> ReturnJSON[Return Complete Blueprint JSON to Client]
+    ReturnJSON --> RenderSVGs[Client-Side Mermaid SVG Vector Rendering]
+    RenderSVGs --> EndNode([Blueprint Ready for Interactive Use])
+        </pre>
+      </div>
+    </div>
+
+    <!-- D.5 Component & Deployment Diagram -->
+    <div class="card" id="card-comp">
+      <div class="card-header">
+        <span class="card-title">8. UML Component & Deployment Diagram</span>
+        <div class="btn-group">
+          <button class="btn" onclick="downloadPNG('container-comp', 'UML_Component_Deployment_Diagram.png')">⬇️ Download PNG</button>
+          <button class="btn btn-secondary" onclick="downloadSVG('container-comp', 'UML_Component_Deployment_Diagram.svg')">⬇️ Download SVG</button>
+        </div>
+      </div>
+      <div class="diagram-container" id="container-comp">
+        <pre class="mermaid">
+flowchart TB
+    subgraph Host["Host Machine (Windows / Linux / macOS)"]
+        Browser["Web Browser (User Client)"]
+        
+        subgraph DockerNetwork["Docker Bridge Network: architect_net"]
+            subgraph Container1["Container: ai_architect_frontend (Port 3000)"]
+                NginxServer["Nginx 1.27 Web Server & Proxy"]
+                StaticFiles["Static React 18 SPA Bundles"]
+                NginxServer --- StaticFiles
+            end
+            
+            subgraph Container2["Container: ai_architect_backend (Port 8000)"]
+                UvicornServer["Uvicorn ASGI Server"]
+                FastAPIApp["FastAPI Application Core"]
+                AIModule["Hybrid AI & Heuristic Service"]
+                UvicornServer --> FastAPIApp
+                FastAPIApp --> AIModule
+            end
+            
+            subgraph Container3["Container: ai_architect_db (Port 5432)"]
+                PostgresService["PostgreSQL 16 Engine"]
+                StorageVolume[("Docker Volume: pgdata")]
+                PostgresService --- StorageVolume
+            end
+        end
+    end
+
+    Browser -->|HTTP / Port 3000| NginxServer
+    NginxServer -->|Internal Proxy /api/ -> Port 8000| UvicornServer
+    FastAPIApp -->|TCP / SQL Connection -> Port 5432| PostgresService
+    AIModule -.->|Optional HTTPS / TLS| OpenAICloud["External OpenAI API Gateway"]
+        </pre>
+      </div>
+    </div>
+
+    <footer>
+      <p>AI Software Architect &bull; System Architecture & Technical Specifications &bull; 2026</p>
+    </footer>
+  </div>
+
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'default',
+      securityLevel: 'loose',
+      flowchart: { useMaxWidth: true, htmlLabels: true, curve: 'basis' }
+    });
+
+    // Helper: Download SVG
+    function downloadSVG(containerId, filename) {
+      const container = document.getElementById(containerId);
+      const svg = container.querySelector('svg');
+      if (!svg) { alert('Diagram still rendering, please wait a moment.'); return; }
+      
+      const serializer = new XMLSerializer();
+      const svgBlob = new Blob([serializer.serializeToString(svg)], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // Helper: Download PNG
+    function downloadPNG(containerId, filename) {
+      const container = document.getElementById(containerId);
+      const svg = container.querySelector('svg');
+      if (!svg) { alert('Diagram still rendering, please wait a moment.'); return; }
+
+      const svgData = new XMLSerializer().serializeToString(svg);
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+
+      const bBox = svg.getBoundingClientRect();
+      const scale = 2; // high resolution (2x retina)
+      canvas.width = (bBox.width || 800) * scale;
+      canvas.height = (bBox.height || 600) * scale;
+
+      const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+      const url = URL.createObjectURL(svgBlob);
+
+      img.onload = function() {
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+        URL.revokeObjectURL(url);
+        
+        const pngUrl = canvas.toDataURL('image/png');
+        const a = document.createElement('a');
+        a.href = pngUrl;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+      };
+      img.src = url;
+    }
+  </script>
+</body>
+</html>
